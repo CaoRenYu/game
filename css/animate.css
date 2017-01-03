@@ -1,0 +1,15 @@
+@keyframes title {
+    0%{ opacity: 0;}
+    100%{ opacity: 1;}
+}
+@keyframes pMove {
+    0%{ padding-left: 1px; opacity: 0;}
+    100%{ padding-left: 450px; opacity: 0.5;}
+}
+@keyframes start {
+    0%{ transform: scale(1); opacity: 0;}
+    25%{ transform: scale(4);}
+    50%{ transform: scale(1);}
+    75%{ transform: scale(2);}
+    100%{ transform: scale(1); opacity: 0.75;}
+}

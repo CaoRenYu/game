@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cry</title>
+    <link rel="stylesheet" href="css/animate.css">
+    <style>
+        *{ margin: 0; padding: 0;}
+        body,html{ width: 100%;}
+        body{ background: url("img/back.jpg") center 0 no-repeat;}
+        h3{ font-size: 24px; font-weight: bold; text-align: center; margin-top: 60px; animation: title 1s ease both; text-shadow: 7px 7px 5px rgba(0,0,0,0.55);}
+        div{ width: 450px; margin: 20px auto;}
+        .name2{ font-size: 18px; height: 140px; animation: pMove 1s ease 0.3s both;}
+        .name1{ font-size: 14px; font-style: italic; color: red; margin: 10px auto; width: 500px; text-align: right; animation: title 1s ease 0.3s both;}
+        a{ margin-top: 100px; display: inline-block; text-align: center; width: 100%;}
+        a>p{ display: inline-block; width: 120px; border: 1px red solid; padding: 20px; font-size: 30px; border-radius: 15px; font-style: italic; background: url("img/play.png") 130px center no-repeat; animation: start 1s ease-out both;}
+        a>p:hover{ font-size: 50px; font-weight: bold; width: 200px; text-shadow: 7px 7px 5px rgba(0,0,0,0.5); background: url("img/play.png") 201px center no-repeat;}
+        #level{ font-style: normal;}
+    </style>
+</head>
+<body>
+    <h3>小游戏：见缝插针</h3>
+    <p class="name1">Made By Cry</p>
+<div>
+    <p class="name2">曹人予制作</p>
+    <a href="game.html" id="href"><p>Start <span id="level">1</span></p></a>
+</div>
+
+<script>
+    //获取链接#后字符并强制转化为数字
+    var level = parseInt(window.location.href.split("#")[1]);
+    if (level){
+        if(level == 7){
+            level = 0;
+        }
+        document.getElementById("level").innerHTML = level + 1;
+        document.getElementById("href").setAttribute('href', 'game.html#' + level);
+    }
+</script>
+</body>
+
+</html>
